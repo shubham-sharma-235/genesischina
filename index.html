@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elegance by Genesis | Where Modesty Meets Elegance</title>
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <meta name="description" content="Premium fabrics for abayas, hijabs, jilbabs, jackets & trousers. Elegance by Genesis – trusted by global garment manufacturers & fashion houses." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <style>
+    html{
+      scroll-behavior: smooth;
+    }
+    @font-face {
+      font-family: 'avenir';
+      src: url('./avenir-book.otf');
+    }
+    :root {
+      --bg: #fdf8f8;
+      --bg-soft: #f4f5fcc9;
+      --border: #E6E8ED;
+      --muted: #5F6B7A;
+      --text: #12151A;
+      --brand: #C32427;
+      --brand-dark: #C32427;
+      --radius: 18px;
+      --shadow-sm: 0 2px 10px rgba(0,0,0,.06);
+      --shadow: 0 8px 28px rgba(0,0,0,.08);
+      --wrap: clamp(980px, 92vw, 1280px); /* less side whitespace on large screens */
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family: avenir; color: var(--text); background: var(--bg); line-height:1.65; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { max-width: var(--wrap); margin:auto; padding: 0 clamp(16px, 4vw, 32px); }
+
+    /* Header */
+    header { position:sticky; top:0; background:#fff; box-shadow:var(--shadow-sm); z-index:50; }
+    nav { display:flex; justify-content:space-between; align-items:center; padding:14px 0; }
+    .logo { display:flex; align-items:center; gap:10px; font-weight:800; color:var(--brand-dark); }
+    .logo-mark { width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg,var(--brand),var(--brand-dark)); display:grid; place-items:center; color:#0f1218; font-weight:900; }
+
+    /* Desktop nav */
+    .nav-links { display:flex; align-items:center; gap:8px; }
+    .nav-links a { color:#3a404a; font-weight:600; padding:8px 10px; border-radius:10px; }
+    .nav-links a:hover { background:#F7F7FA; }
+    .btn { display:inline-block; padding:10px 16px; border-radius:10px; background:var(--brand); color:#fff; font-weight:700; box-shadow:0 6px 18px rgba(198,164,94,.25); border:1px solid rgba(198,164,94,.5); }
+
+    /* Mobile trigger */
+    .hamburger { display:none; width:42px; height:42px; border:1px solid var(--border); border-radius:12px; background:#fff; box-shadow:var(--shadow-sm); align-items:center; justify-content:center; cursor:pointer; }
+    .hamburger span, .hamburger::before, .hamburger::after { content:""; display:block; width:20px; height:2px; background:#111; border-radius:2px; }
+    .hamburger span { margin:4px 0; }
+
+    /* Mobile panel */
+    .mobile-panel { display:none; position:fixed; inset:0; background: rgba(0,0,0,.2); backdrop-filter: blur(2px); z-index:40; }
+    .mobile-sheet { position:absolute; right: clamp(12px, 4vw, 24px); top: 72px; width:min(92vw, 420px); border:1px solid var(--border); border-radius:16px; background:#fff; box-shadow: var(--shadow); padding:14px; }
+    .mobile-sheet a { display:block; padding:12px 10px; border-radius:10px; color:#2b313b; font-weight:600; }
+    .mobile-sheet a:hover { background:#F7F7FA; }
+    .mobile-actions { display:flex; gap:10px; padding:8px 10px 4px; }
+
+    body.nav-open { overflow:hidden; }
+    body.nav-open .mobile-panel { display:block; }
+
+    /* Sections */
+    section { padding:100px 0; }
+    .section-inner { max-width: var(--wrap); margin:auto; padding: 0 clamp(16px, 4vw, 32px); }
+    .band { background:var(--bg-soft); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .section-head { text-align:center; margin-bottom:56px; }
+    .kicker { color:var(--brand-dark); font-weight:800; letter-spacing:.18em; text-transform:uppercase; font-size:12px; }
+    h2 { font-family:"Cormorant Garamond", serif; font-size:2.6rem; line-height:1.1; margin-top:6px; }
+    .lede { color:#465160; max-width:75ch; margin: 8px auto 0; text-align:center; }
+
+    /* Hero */
+    #hero .media { margin-bottom:0; }
+    .media { display:grid; grid-template-columns:1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items:center; margin-bottom: clamp(40px, 8vw, 100px); }
+    .media.reverse { direction:rtl; }
+    .media.reverse .media-text { direction:ltr; }
+    .media-img { width:100%; height: clamp(320px, 48vw, 480px); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--border); }
+    .media-img img { width:100%; height:100%; object-fit:cover; }
+    .media-text h3 { font-family:"Cormorant Garamond", serif; color:#111; font-size:1.9rem; margin-bottom:10px; }
+    .media-text p { color:#3f4652; margin-bottom:10px; }
+    .badges { display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
+    .badge { padding:8px 12px; background:#fff; border:1px solid var(--border); border-radius:999px; font-size:.9rem; }
+
+    /* Features + mini tiles */
+    .feature-row { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; margin-top:20px; }
+    .feature { background:#fff; border:1px solid var(--border); border-radius:14px; padding:18px; box-shadow:var(--shadow-sm); }
+    .feature h4 { color:var(--brand-dark); margin-bottom:6px; font-size:1rem; }
+
+    /* Collections grid */
+    .collections { display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; margin-top:22px; }
+    .tile { position:relative; border-radius:16px; overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow-sm); background:#fff; }
+    .tile img { width:100%; height:220px; object-fit:cover; display:block; }
+    .tile h5 { position:absolute; left:14px; bottom:14px; background:rgba(255,255,255,.9); padding:6px 10px; border-radius:8px; font-size:.95rem; font-weight:700; }
+
+    /* Process strip */
+    .process { display:grid; grid-template-columns: repeat(4, 1fr); gap:16px; margin-top:24px; }
+    .step { background:#fff; border:1px solid var(--border); border-radius:14px; padding:16px; text-align:center; box-shadow:var(--shadow-sm); }
+    .step b { display:block; color:#111; margin-bottom:4px; }
+    .step span { color:#5a6472; font-size:.95rem; }
+
+    /* FAQ */
+    .faq { max-width:900px; margin: 0 auto; }
+    .faq-item { border:1px solid var(--border); border-radius:14px; background:#fff; margin-bottom:12px; overflow:hidden; box-shadow:var(--shadow-sm); }
+    .faq-q { width:100%; text-align:left; background:#fff; border:0; padding:16px 18px; font-weight:700; cursor:pointer; display:flex; justify-content:space-between; align-items:center; }
+    .faq-a { display:none; padding:0 18px 16px; color:#485467; }
+    .faq-item.open .faq-a { display:block; }
+
+    /* Contact */
+    .contact-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:60px; align-items:center; }
+    .card { background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:40px; box-shadow:var(--shadow); }
+    .contact .info { display:grid; grid-template-columns: 1fr 1fr; gap:20px; }
+    .social a { margin-right:10px; color:var(--brand-dark); font-weight:700; }
+
+    /* Footer */
+    footer { background:#FFFFFF; border-top:1px solid var(--border); }
+    .footer-wrap { max-width: var(--wrap); margin:auto; padding:60px clamp(16px, 4vw, 32px); display:grid; grid-template-columns: 1.2fr .8fr .8fr 1fr; gap:30px; }
+    .foot-brand { display:flex; align-items:center; gap:12px; }
+    .foot-brand .logo-mark { width:38px; height:38px; }
+    .foot-brand h4 { margin:0; }
+    .foot-text { color:#4c5564; margin-top:10px; }
+    .foot-col h5 { margin-bottom:10px; font-size:1rem; color:#111; }
+    .foot-col a { display:block; color:#485060; padding:6px 0; }
+    .newsletter { background:#FDF9EF; border:1px solid #F1E6CE; padding:14px; border-radius:12px; }
+    .newsletter form { display:flex; gap:8px; margin-top:8px; }
+    .newsletter input { flex:1; padding:10px 12px; border:1px solid var(--border); border-radius:10px; }
+    .newsletter button { padding:10px 12px; border-radius:10px; border:1px solid rgba(198,164,94,.5); background:var(--brand); color:#fff; font-weight:700; }
+    .legal { border-top:1px solid var(--border); padding:14px clamp(16px, 4vw, 32px); color:#6b7280; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; max-width: var(--wrap); margin:auto; }
+
+    /* Responsive */
+    @media(max-width:1100px){ .collections{grid-template-columns:1fr 1fr;} .process{grid-template-columns:1fr 1fr;} .footer-wrap{grid-template-columns: 1fr 1fr; } .contact-grid{grid-template-columns:1fr;} }
+    @media(max-width:900px){
+      .nav-links, nav .btn { display:none; }
+      .hamburger { display:flex; }
+      section {
+        padding: 20px 0;
+      }
+    }
+    @media(max-width:700px){ .media, .media.reverse{grid-template-columns:1fr; direction:ltr;} .media-img{height:300px;} .feature-row{grid-template-columns:1fr;} .collections{grid-template-columns:1fr;} .process{grid-template-columns:1fr 1fr;} }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="wrap">
+      <nav aria-label="Primary">
+        <div class="logo">
+            <img style="height: 8vh;" src="./images/logo.png" alt="">
+        </div>
+        <div class="nav-links" role="menubar" aria-label="Main menu">
+          <a href="#hero" role="menuitem">Home</a>
+          <a href="#about" role="menuitem">About</a>
+          <a href="#abaya" role="menuitem">Abaya</a>
+          <a href="#hijab" role="menuitem">Hijab & Jilbab</a>
+          <a href="#collections" role="menuitem">Collections</a>
+          <a href="#jackets" role="menuitem">Jackets</a>
+          <a href="#contact" role="menuitem">Contact</a>
+        </div>
+        <a class="btn" href="#contact">Request Samples</a>
+        <button class="hamburger" id="navToggle" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false"><span></span></button>
+      </nav>
+    </div>
+    <div class="mobile-panel" id="mobileNav" aria-hidden="true">
+      <div class="mobile-sheet" role="dialog" aria-modal="true">
+        <div class="mobile-actions">
+          <a class="btn" href="#contact" style="flex:1; text-align:center;">Request Samples</a>
+        </div>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#abaya">Abaya</a>
+        <a href="#hijab">Hijab & Jilbab</a>
+        <a href="#collections">Collections</a>
+        <a href="#jackets">Jackets</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero"><div class="section-inner">
+    <div class="media">
+      <div class="media-text">
+        <h2 style=" font-size:3rem; color:#111;">Where Modesty Meets Elegance</h2>
+        <p style="max-width:540px; margin-top:10px;">Premium fabrics for Abayas, Hijabs, Jilbabs & more — curated for graceful drape, comfort, and timeless appeal.</p>
+        <div class="badges">
+          <span class="badge">Crepe • Chiffon • Nida • Satin</span>
+          <span class="badge">Bulk & MOQ friendly</span>
+          <span class="badge">Global shipping</span>
+        </div>
+        <a href="#collections" class="btn" style="margin-top:18px;">Explore Fabrics</a>
+      </div>
+      <div class="media-img"><img src="./images/doctake-uWr25qgfOjY-unsplash.jpg" alt="Elegant woman in abaya"/></div>
+    </div>
+  </div></section>
+
+  <!-- About / Company Profile -->
+  <section id="about" class="band"><div class="section-inner">
+    <div class="section-head">
+      <div class="kicker">Company Profile</div>
+      <h2>Elegance by Genesis</h2>
+      <p class="lede">Founded in 1995, we supply premium fabrics tailored for Islamic women’s fashion — serving brands across the Middle East, North Africa, Southeast Asia, and Europe.</p>
+    </div>
+    <div class="media">
+      <div class="media-img"><img src="./images/about-img.avif" alt="Company Team"/></div>
+      <div class="media-text">
+        <h3>Who We Are</h3>
+        <p>With 40+ years of combined experience, our team understands the unique needs of designers, manufacturers, and wholesalers in the modest fashion space. From flowing abayas to tailored jilbabs and delicate hijabs, we curate fabrics that balance tradition with contemporary appeal.</p>
+        <p>At the heart of our company lies a commitment to quality, innovation, fair pricing, and dependable service. We support your vision with timely sampling, consistent dye‑lots, and reliable logistics.</p>
+        <div class="feature-row">
+          <div class="feature"><h4>Global Reach</h4><p>MENA • SEA • Europe — fast fulfillment.</p></div>
+          <div class="feature"><h4>Curated Library</h4><p>Crepe, chiffon, nida, satin, twill, viscose, modal & blends.</p></div>
+          <div class="feature"><h4>Quality & Value</h4><p>QC checks, competitive pricing, and steady supply.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Process strip -->
+    <div class="process">
+      <div class="step"><b>1. Source</b><span>Tell us your spec: weight, finish, shade.</span></div>
+      <div class="step"><b>2. Sample</b><span>Receive swatches & test hand‑feel.</span></div>
+      <div class="step"><b>3. Confirm</b><span>Lock dye‑lot and delivery window.</span></div>
+      <div class="step"><b>4. Ship</b><span>Tracked dispatch with export docs.</span></div>
+    </div>
+  </div></section>
+
+  <!-- Abaya Fabrics -->
+  <section id="abaya"><div class="section-inner">
+    <div class="section-head">
+      <div class="kicker">Products</div>
+      <h2>Abaya Fabrics</h2>
+      <p class="lede">Designed for grace and comfort with an elegant drape, flow, and opacity in dark, luxurious textures.</p>
+    </div>
+    <div class="media">
+      <div class="media-img"><img src="./images/abaya-fabrics.avif" alt="Abaya fabric"/></div>
+      <div class="media-text">
+        <p>Choose from matte, crepe, chiffon, satin, and nida — each fabric carefully curated to reflect your personal style and comfort. </p>
+        <br>
+        <p>
+            Our colour-fast dyes ensure that every shade stays rich and radiant, wash after wash, while refined finishes lend a graceful fall and effortless drape. Designed for modern elegance with minimal maintenance, these fabrics promise a look that feels as good as it looks — soft on the skin, fluid in movement, and timeless in appeal.
+        </p>
+        <div class="feature-row">
+          <div class="feature"><h4>Soft Hand‑feel</h4><p>Resilient structure for daily wear.</p></div>
+          <div class="feature"><h4>High Opacity</h4><p>Modest silhouettes without bulk.</p></div>
+          <div class="feature"><h4>Colour‑fast</h4><p>Finishes that stand up to washing.</p></div>
+        </div>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- Hijab & Jilbab -->
+  <section id="hijab" class="band"><div class="section-inner">
+    <div class="section-head">
+      <div class="kicker">Products</div>
+      <h2>Hijab & Jilbab Fabrics</h2>
+      <p class="lede">Lightweight, breathable, and non‑slip constructions for all‑day comfort with elegant movement.</p>
+    </div>
+    <div class="media reverse">
+      <div class="media-img"><img src="./images/jilbab-fabrics.jpg" alt="Hijab fabric"/></div>
+      <div class="media-text">
+        <p>
+            Chiffon, viscose, modal, and stretch knits — each fabric thoughtfully engineered for secure styling and effortless comfort, especially in warm climates. Designed to let your skin breathe while maintaining a graceful drape, these fabrics move with you through every moment of the day.
+        </p>
+        <p>
+            With anti-static and easy-care options, they promise hassle-free maintenance and a smooth, polished finish even after repeated wear. Whether you're dressing up for an occasion or keeping it casual, these blends offer the perfect balance of lightness, flexibility, and lasting elegance.
+        </p>
+        <div class="feature-row">
+          <div class="feature"><h4>Everyday Ease</h4><p>Soft edges with natural drape.</p></div>
+          <div class="feature"><h4>Airy Comfort</h4><p>Breathable weaves for heat.</p></div>
+          <div class="feature"><h4>Secure Wear</h4><p>Non‑slip textures that stay put.</p></div>
+        </div>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- Featured Collections (extra content) -->
+  <section id="collections"><div class="section-inner">
+    <div class="section-head">
+      <div class="kicker">Collections</div>
+      <h2>Featured Fabric Families</h2>
+      <p class="lede">A snapshot of our most requested bases. Full shade cards and specs available on request.</p>
+    </div>
+    <div class="collections">
+      <div class="tile"><img src="./images/crepe.avif" alt="Crepe"/><h5>Crepe – Fluid & Matte</h5></div>
+      <div class="tile"><img src="./images/chiffon.avif" alt="Chiffon"/><h5>Chiffon – Airy Sheer</h5></div>
+      <div class="tile"><img src="./images/satin.avif" alt="Satin"/><h5>Satin – Luxe Sheen</h5></div>
+    </div>
+  </div></section>
+
+  <!-- Jackets & Trousers -->
+  <section id="jackets"><div class="section-inner">
+    <div class="section-head">
+      <div class="kicker">Products</div>
+      <h2>Jackets & Trousers Fabrics</h2>
+      <p class="lede">Structured, wrinkle‑resistant materials ideal for modest formalwear or uniform use.</p>
+    </div>
+    <div class="media">
+      <div class="media-img"><img src="./images/trousers-fabrics.avif" alt="Tailoring fabric"/></div>
+      <div class="media-text">
+        <p>
+          Premium twill, suiting, and polyester blends — crafted to deliver refined structure, durability, and comfort in every wear. Designed with comfort-stretch options, these fabrics ensure ease of movement without compromising on their crisp, tailored appearance.
+        </p>
+        <br>
+        <p>
+          Our consistent dye-lots, maintained through stringent quality control at scale, guarantee uniform colour and finish across every batch. Perfect for professional, formal, or custom-fit creations, these blends combine luxury feel with long-term performance, making them a dependable choice for precision tailoring and elevated everyday wear.
+        </p>
+        <div class="feature-row">
+          <div class="feature"><h4>Shape Retention</h4><p>Crease recovery for long wear.</p></div>
+          <div class="feature"><h4>Comfort Stretch</h4><p>Freedom of movement for daily use.</p></div>
+          <div class="feature"><h4>Bulk Reliability</h4><p>Stable supply for larger orders.</p></div>
+        </div>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- FAQ (extra content) -->
+  <section class="band" id="faq"><div class="section-inner">
+    <div class="section-head">
+      <div class="kicker">FAQ</div>
+      <h2>Questions, answered</h2>
+      <p class="lede">If you need certifications, shade cards or testing reports, just let us know in your message.</p>
+    </div>
+    <div class="faq">
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">What is your typical MOQ? <span>+</span></button><div class="faq-a">Our standard MOQ varies by quality and shade, but we can accommodate sample meters and small pilot runs for new collections.</div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Do you ship internationally? <span>+</span></button><div class="faq-a">Yes. We ship across MENA, SEA, and Europe with full export documentation and tracking.</div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Can I request custom dye‑lots? <span>+</span></button><div class="faq-a">Absolutely. Provide your Pantone or physical swatch and we’ll develop a lab‑dip for approval.</div></div>
+    </div>
+  </div></section>
+
+  <!-- Contact -->
+  <section id="contact" class="band contact"><div class="section-inner">
+    <div class="section-head">
+      <div class="kicker">Contact</div>
+      <h2>Get in Touch</h2>
+      <p class="lede">Tell us your fabric needs and target delivery date. We’ll respond with available bases, shade options and timelines.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="card">
+        <h3>Elegance by Genesis</h3>
+        <div class="info">
+          <div>
+            <h4>Shanghai Office</h4>
+            <p>Suite 10D, Oriental Century Building<br/>345 Xianxia Road, Changning District<br/>Shanghai 200336, China<br/>Tel: 021 62757540</p>
+          </div>
+          <div>
+            <h4>Keqiao Office</h4>
+            <p>Room 1504, No.83 Wendu Road<br/>Keqiao, Shaoxing 312030, Zhejiang, China<br/>Tel: 0575‑85676569 / 70 / 71</p>
+          </div>
+        </div>
+        <p style="margin-top:10px;">Email: <a href="mailto:email@example.com">email@example.com</a> &nbsp;|&nbsp; Phone: <a href="tel:+0000000000">+00 000000000</a></p>
+        <div class="badges" style="margin-top:10px;">
+          <a class="badge" href="https://elegance.genesischina.com" target="_blank" rel="noopener">elegance.genesischina.com</a>
+          <a class="badge" href="#">Instagram</a>
+          <a class="badge" href="#">LinkedIn</a>
+          <a class="badge" href="#">WhatsApp</a>
+        </div>
+        <p style="color:#5b6574; margin-top:8px;">Trusted by global garment manufacturers & fashion houses.</p>
+      </div>
+      <div class="media-img"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="Office"/></div>
+    </div>
+  </div></section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-wrap">
+      <div>
+        <div class="foot-brand">
+          <img style="height: 8vh;" src="./images/logo.png" alt="">
+        </div>
+        <p class="foot-text">Premium fabrics for abayas, hijabs, jilbabs, jackets & trousers — delivered with consistency, care and global reach.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Collections</h5>
+        <a href="#abaya">Abaya Fabrics</a>
+        <a href="#hijab">Hijab Fabrics</a>
+        <a href="#hijab">Jilbab Fabrics</a>
+        <a href="#jackets">Jackets & Trousers</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="#about">About Us</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="#collections">Shade Cards</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="mailto:email@example.com">email@example.com</a>
+        <a href="tel:+0000000000">+00 000000000</a>
+        <a href="https://elegance.genesischina.com" target="_blank" rel="noopener">Website</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="year"></span> Elegance by Genesis. All rights reserved.</span>
+      <span>Shanghai · Keqiao · Serving MENA · SEA · Europe</span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    function closeNav(){
+      document.body.classList.remove('nav-open');
+      navToggle.setAttribute('aria-expanded','false');
+      mobileNav.setAttribute('aria-hidden','true');
+    }
+    navToggle?.addEventListener('click', () => {
+      const open = document.body.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', String(open));
+      mobileNav.setAttribute('aria-hidden', String(!open));
+    });
+    mobileNav?.addEventListener('click', (e) => {
+      if(e.target === mobileNav) closeNav();
+    });
+    document.querySelectorAll('.mobile-sheet a').forEach(a => a.addEventListener('click', closeNav));
+
+    // FAQ toggles
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        item.classList.toggle('open');
+        btn.setAttribute('aria-expanded', item.classList.contains('open'));
+      });
+    });
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
