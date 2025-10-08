@@ -37,15 +37,16 @@
     .wrap { max-width: var(--wrap); margin:auto; padding: 0 clamp(16px, 4vw, 32px); }
 
     /* Header */
-    header { position:sticky; top:0; background:#fff; box-shadow:var(--shadow-sm); z-index:50; }
+    header { position:sticky; top:0; background:#000000; box-shadow:var(--shadow-sm); z-index:50; }
     nav { display:flex; justify-content:space-between; align-items:center; padding:14px 0; }
     .logo { display:flex; align-items:center; gap:10px; font-weight:800; color:var(--brand-dark); }
     .logo-mark { width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg,var(--brand),var(--brand-dark)); display:grid; place-items:center; color:#0f1218; font-weight:900; }
 
     /* Desktop nav */
     .nav-links { display:flex; align-items:center; gap:8px; }
-    .nav-links a { color:#3a404a; font-weight:600; padding:8px 10px; border-radius:10px; }
-    .nav-links a:hover { background:#F7F7FA; }
+    .nav-links a { color:#dad8d8; font-weight:600; padding:8px 10px; border-radius:10px; }
+    .nav-links a:hover { background:#F7F7FA;color: #0f1218; }
+    .nav-links a:hover a { color: #0f1218; }
     .btn { display:inline-block; padding:10px 16px; border-radius:10px; background:var(--brand); color:#fff; font-weight:700; box-shadow:0 6px 18px rgba(198,164,94,.25); border:1px solid rgba(198,164,94,.5); }
 
     /* Mobile trigger */
@@ -128,6 +129,49 @@
     .newsletter input { flex:1; padding:10px 12px; border:1px solid var(--border); border-radius:10px; }
     .newsletter button { padding:10px 12px; border-radius:10px; border:1px solid rgba(198,164,94,.5); background:var(--brand); color:#fff; font-weight:700; }
     .legal { border-top:1px solid var(--border); padding:14px clamp(16px, 4vw, 32px); color:#6b7280; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; max-width: var(--wrap); margin:auto; }
+    .w3f-contact { padding: 80px 0; background: ; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .w3f-contact .w3f-wrap { width: min(1280px, 92vw); margin: 0 auto; }
+    
+    .w3f-head { text-align:center; margin-bottom: 32px; }
+    .w3f-kicker { color: var(--brand-dark); font-weight:800; letter-spacing:.18em; text-transform:uppercase; font-size:12px; }
+    .w3f-title { font-family: "Playfair Display", serif; font-size: clamp(28px, 4vw, 42px); margin: 6px 0 8px; color:#111; }
+    .w3f-lede { color:#465160; max-width: 75ch; margin: 0 auto; }
+    
+    .w3f-form { background:#fff; border:1px solid var(--border); border-radius:16px; box-shadow: 0 8px 28px rgba(0,0,0,.08); padding: 22px; }
+    .w3f-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .w3f-full { grid-column: 1 / -1; }
+    
+    .w3f-field { display:flex; flex-direction:column; gap:8px; }
+    .w3f-field label { font-weight:700; color:#0f1218; }
+    .w3f-field input,
+    .w3f-field select,
+    .w3f-field textarea {
+      border:1px solid var(--border); border-radius:12px; padding:12px 12px;
+      font: inherit; background:#fff; color:#111;
+    }
+    .w3f-field textarea { min-height:140px; resize: vertical; }
+    .w3f-small { color:#5b6574; font-size:.9rem; }
+    
+    .w3f-actions { display:flex; gap:10px; align-items:center; margin-top:12px; flex-wrap: wrap; }
+    .w3f-btn {
+      padding:12px 16px; border-radius:10px; border:1px solid rgba(198,164,94,.5);
+      background: var(--brand); color:#fff; font-weight:700; cursor:pointer;
+      box-shadow: 0 6px 18px rgba(198,164,94,.25);
+    }
+    .w3f-btn.w3f-secondary { background:#fff; color:#111; border:1px solid var(--border); }
+    .w3f-btn[disabled] { opacity:.6; cursor:not-allowed; }
+    
+    .w3f-result { display:none; margin-left:auto; padding:10px 12px; border-radius:10px; border:1px solid var(--border); background:#F7F7FA; color:#1f2937; }
+    .w3f-result.show { display:block; }
+    
+    .w3f-bot { display:none !important; }
+    
+    @media (max-width: 900px) {
+      .w3f-grid { grid-template-columns: 1fr; }
+    }
+    #jackets{
+      background-color: var(--bg-soft);
+    }
 
     /* Responsive */
     @media(max-width:1100px){ .collections{grid-template-columns:1fr 1fr;} .process{grid-template-columns:1fr 1fr;} .footer-wrap{grid-template-columns: 1fr 1fr; } .contact-grid{grid-template-columns:1fr;} }
@@ -247,7 +291,7 @@
       <p class="lede">Designed for grace and comfort with an elegant drape, flow, and opacity in dark, luxurious textures.</p>
     </div>
     <div class="media">
-      <div class="media-img"><img src="./images/artboard-2.jpg" alt="Abaya fabric"/></div>
+      <div class="media-img" style="height: 100%!important;"><img src="./images/artboard-4.jpg" alt="Abaya fabric"/></div>
       <div class="media-text">
         <p>Choose from matte, crepe, chiffon, satin, and nida — each fabric carefully curated to reflect your personal style and comfort. </p>
         <br>
@@ -271,7 +315,7 @@
       <p class="lede">Lightweight, breathable, and non‑slip constructions for all‑day comfort with elegant movement.</p>
     </div>
     <div class="media reverse">
-      <div class="media-img"><img src="./images/artboard-3.jpg" alt="Hijab fabric"/></div>
+      <div class="media-img" style="height: 100%!important;"><img src="./images/artboard-3.jpg" alt="Hijab fabric"/></div>
       <div class="media-text">
         <p>
             Chiffon, viscose, modal, and stretch knits — each fabric thoughtfully engineered for secure styling and effortless comfort, especially in warm climates. Designed to let your skin breathe while maintaining a graceful drape, these fabrics move with you through every moment of the day.
@@ -328,22 +372,66 @@
     </div>
   </div></section>
 
-  <!-- FAQ (extra content) -->
-  <section class="band" id="faq"><div class="section-inner">
-    <div class="section-head">
-      <div class="kicker">FAQ</div>
-      <h2>Questions, answered</h2>
-      <p class="lede">If you need certifications, shade cards or testing reports, just let us know in your message.</p>
+
+  <section id="contact" class="w3f-contact" aria-labelledby="w3f-heading">
+  <div class="w3f-wrap">
+    <div class="w3f-head">
+      <p class="w3f-kicker">Inquiry</p>
+      <h2 id="w3f-heading" class="w3f-title">Request Samples / Quote</h2>
+      <p class="w3f-lede">Tell us your fabric needs and target delivery date. We’ll reply with bases, shade options, and timelines.</p>
     </div>
-    <div class="faq">
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">What is your typical MOQ? <span>+</span></button><div class="faq-a">Our standard MOQ varies by quality and shade, but we can accommodate sample meters and small pilot runs for new collections.</div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Do you ship internationally? <span>+</span></button><div class="faq-a">Yes. We ship across MENA, SEA, and Europe with full export documentation and tracking.</div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Can I request custom dye‑lots? <span>+</span></button><div class="faq-a">Absolutely. Provide your Pantone or physical swatch and we’ll develop a lab‑dip for approval.</div></div>
-    </div>
-  </div></section>
+
+    <form class="w3f-form" action="https://api.web3forms.com/submit" method="POST" accept-charset="UTF-8">
+      <!-- REQUIRED: replace with your Web3Forms access key -->
+      <input type="hidden" name="access_key" value="2c21458d-686d-4e8c-b456-b684fa071e39" />
+      <input type="hidden" name="subject" value="New Inquiry — Elegance by Genesis" />
+      <input type="hidden" name="Landing page contact form" value="Elegance by Genesis Website" />
+      <!-- Optional: set which field replies go to -->
+      <input type="hidden" name="replyto" value="{{email}}" />
+      <!-- Optional: redirect to a custom thank-you page -->
+      <!-- <input type="hidden" name="redirect" value="https://yourdomain.com/thank-you" /> -->
+      <!-- Honeypot spam protection -->
+      <input type="checkbox" name="botcheck" class="w3f-bot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+      <div class="w3f-grid">
+        <div class="w3f-field">
+          <label for="w3f-name">Your Name *</label>
+          <input id="w3f-name" name="name" type="text" required autocomplete="name" placeholder="Full name" />
+        </div>
+
+        <div class="w3f-field">
+          <label for="w3f-email">Email *</label>
+          <input id="w3f-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com" />
+        </div>
+
+        <div class="w3f-field">
+          <label for="w3f-phone">Phone / WhatsApp</label>
+          <input id="w3f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+86 18601617588" />
+        </div>
+
+        <div class="w3f-field">
+          <label for="w3f-country">Country</label>
+          <input id="w3f-country" name="country" type="text" autocomplete="country-name" placeholder="United Arab Emirates" />
+        </div>
+
+        <div class="w3f-field w3f-full">
+          <label for="w3f-message">Message *</label>
+          <textarea id="w3f-message" name="message" required placeholder="Tell us about colours, GSM, width, finish, usage…"></textarea>
+          <p class="w3f-small">By submitting, you consent to be contacted about your inquiry.</p>
+        </div>
+      </div>
+
+      <div class="w3f-actions">
+        <button type="submit" class="w3f-btn">Send Inquiry</button>
+        <button type="reset" class="w3f-btn w3f-secondary">Reset</button>
+      </div>
+    </form>
+  </div>
+</section>
+
 
   <!-- Contact -->
-  <section id="contact" class="band contact"><div class="section-inner">
+  <section class="band contact"><div class="section-inner">
   <div class="section-head">
   <div class="kicker">Contact</div>
   <h2>Get in Touch</h2>
