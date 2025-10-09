@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wholesalers — Elegance by Genesis</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/png" href="../images/favicon.png"/>
+<link rel="stylesheet" href="../style.css">
+<style>
+  :root{
+    --bg:#fdf8f8; --paper:#fff; --soft:#f4f5fcc9;
+    --text:#12151A; --muted:#5F6B7A;
+    --brand:#C32427; --brand-dark:#A71F22; --ink:#191D2D;
+    --border:#E6E8ED; --radius:16px;
+    /* wider page container so the text block can breathe */
+    --wrap: clamp(1040px, 94vw, 1280px);
+    --shadow: 0 12px 30px rgba(0,0,0,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);line-height:1.7}
+  .wrap{width:var(--wrap);margin:0 auto;padding:0 clamp(16px,4vw,28px)}
+  h1,h2{line-height:1.08}
+
+  section{padding: clamp(52px,8vw,90px) 0}
+
+  /* HERO (minimal) */
+  .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#1b2234,#121929);color:#F6EFE9}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{font-size: clamp(30px,2.6vw,58px);text-transform:uppercase;letter-spacing:.02em}
+  .hero::before{content:"";position:absolute;top:-8%;left:-6%;width:60vw;height:46%;
+    background:linear-gradient(180deg,var(--brand),var(--brand-dark));
+    clip-path:polygon(0 0,100% 0,70% 36%,0 62%);filter:drop-shadow(0 8px 18px rgba(0,0,0,.18))}
+  .hero::after{content:"";position:absolute;right:-12%;bottom:-14%;width:72vw;height:46%;background:#E9DFD1;
+    clip-path:polygon(28% 0,100% 16%,100% 100%,0 100%);opacity:.95}
+
+  /* WIDE TEXT PANEL (replaces small card) */
+  .panel{
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    /* full width of the container for a wider feel */
+    width: 100%;
+    overflow: hidden;
+  }
+  .panel .bar{
+    height: 6px; background: linear-gradient(90deg, var(--brand), var(--brand-dark));
+  }
+  .panel .inner{
+    padding: clamp(20px, 4vw, 36px);
+  }
+  .panel h2{
+    font-size: clamp(28px, 4vw, 44px);
+    margin-bottom: 8px; color:#111;
+  }
+  .panel .lede{
+    color:#3f4652; font-size: clamp(16px, 1.2vw, 18px);
+    max-width: 1000px; /* keep comfortable line length while panel is wide */
+    text-align: start;
+    max-width: 100%!important;
+  }
+
+  /* Testimonial block (clean and elegant) */
+  .quote{
+    margin-top: 18px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--brand);
+    border-radius: 12px;
+    padding: clamp(14px, 2.4vw, 20px);
+  }
+  .quote p{
+    color:#2b313b; font-size: clamp(16px, 1.1vw, 18px);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px){
+    .panel .lede{max-width: 100%;}
+  }
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="wrap">
+      <nav aria-label="Primary">
+        <div class="logo">
+          <img style="height: 8vh;" src="../images/logo.png" alt="Elegance by Genesis">
+        </div>
+  
+        <div class="nav-links" role="menubar" aria-label="Main menu">
+          <a href="../index.html" role="menuitem">Home</a>
+          <a href="../index.html#about" role="menuitem">About</a>
+          <a href="../our-secret.html" role="menuitem">Our Secret</a>
+  
+          <!-- DROPDOWN: Our Customers -->
+          <div class="nav-dropdown" role="none">
+            <button class="nav-dropbtn"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+              Our Customers
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 20 20" style="margin-left:6px">
+                <path d="M5 7l5 6 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="nav-menu" role="menu" aria-label="Our Customers submenu">
+              <a role="menuitem" href="./agents.html">Agents</a>
+              <a role="menuitem" href="./brand-owners.html">Brand Owners</a>
+              <a role="menuitem" href="./garment-manufacturers.html">Garment Manufacturers</a>
+              <a role="menuitem" href="./wholesalers.html">Wholesalers</a>
+            </div>
+          </div>
+          <!-- /DROPDOWN -->
+  
+        </div>
+  
+        <a class="btn" href="#contact">Contact Us</a>
+        <button class="hamburger" id="navToggle" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
+          <img style="height: 3.4vh;" src="./images/menu.png" alt="">
+        </button>
+      </nav>
+    </div>
+  
+    <!-- Mobile sheet -->
+    <div class="mobile-panel" id="mobileNav" aria-hidden="true">
+      <div class="mobile-sheet" role="dialog" aria-modal="true">
+        <div class="mobile-actions">
+          <a class="btn" href="#contact" style="flex:1; text-align:center;">Contact Us</a>
+        </div>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#about">About</a>
+        <a href="../our-secret.html">Our Secret</a>
+  
+        <!-- Mobile submenu (simple list) -->
+        <div class="mobile-subgroup">
+          <div class="mobile-subhead">Our Customers</div>
+          <a href="./agents.html">Agents</a>
+          <a href="./brand-owners.html">Brand Owners</a>
+          <a href="./garment-manufacturers.html">Garment Manufacturers</a>
+          <a href="./wholesalers.html">Wholesalers</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Wholesalers">
+    <div class="wrap">
+      <h1>Wholesalers</h1>
+    </div>
+  </section>
+
+  <!-- CONTENT (wide panel) -->
+  <section aria-labelledby="wh-title">
+    <div class="wrap">
+      <article class="panel">
+        <div class="bar" aria-hidden="true"></div>
+        <div class="inner">
+          <p class="lede" style="margin-top:6px;">
+            Your clients expect the best from you, and we can help you deliver it. Genesis Fabrics can help you meet your customers’ expectations and delight them with cutting -edge fabrics of the highest quality – delivered on time, every time.
+          </p>
+
+          <div class="quote">
+            <p>
+              “Since starting work with Genesis Fabrics we’ve been able to grow our customer satisfaction levels from 88% to 96% – this has mainly been based on the introduction of new fabrics that our customers haven’t been able to source before, and the reliability with which we can now supply them.”
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+    <!-- Footer -->
+  <footer>
+    <div class="footer-wrap">
+      <div>
+        <div class="foot-brand">
+          <img style="height: 8vh;" src="../images/favicon.png" alt="">
+        </div>
+        <p class="foot-text">Premium fabrics for abayas, hijabs, jilbabs, jackets & trousers — delivered with consistency, care and global reach.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Collections</h5>
+        <a href="#abaya">Abaya Fabrics</a>
+        <a href="#hijab">Hijab Fabrics</a>
+        <a href="#jilbab">Jilbab Fabrics</a>
+        <a href="#jackets">Jackets & Trousers</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="#about">About Us</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="#collections">Shade Cards</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="mailto:sales@genesischina.com">sales@genesischina.com</a>
+        <a href="tel:+86 18601617588">+86 18601617588</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="year"></span> Elegance by Genesis. All rights reserved.</span>
+      <span>Shanghai · Keqiao · Serving MENA · SEA · Europe</span>
+    </div>
+  </footer>
+    <script>
+    // Desktop/touch dropdown toggle for "Our Customers"
+    const dd = document.querySelector('.nav-dropdown');
+    const btn = dd?.querySelector('.nav-dropbtn');
+    const menu = dd?.querySelector('.nav-menu');
+  
+    function closeDropdown(){
+      dd?.classList.remove('open');
+      btn?.setAttribute('aria-expanded', 'false');
+    }
+  
+    btn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isOpen = dd.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    });
+  
+    document.addEventListener('click', (e) => {
+      if (!dd) return;
+      if (!dd.contains(e.target)) closeDropdown();
+    });
+  
+    // close with Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeDropdown();
+    });
+  </script>
+</body>
+</html>
