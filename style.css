@@ -241,9 +241,3 @@ footer { background:#FFFFFF; border-top:1px solid var(--border); }
   margin-left: 10px;
 }
 
-  @media (max-width:900px){
-    .panel .lede{max-width:100%}
-    .wrap {
-      width: 100%;
-    }
-  }
