@@ -230,6 +230,10 @@ footer { background:#FFFFFF; border-top:1px solid var(--border); }
 /* Mobile submenu label in sheet */
 .mobile-subgroup{ padding:8px 0 2px; }
 .mobile-subhead{
-  font-weight:800; font-size:.9rem; letter-spacing:.12em; text-transform:uppercase;
-  color:#6b7280; padding:8px 10px;
+  font-weight:800; font-size:.9rem; letter-spacing:.12em;
+  color:#000; padding:8px 10px;
+}
+.mobile-subgroup a{
+  color: #6b7280;
+  margin-left: 10px;
 }
