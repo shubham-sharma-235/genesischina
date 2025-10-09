@@ -204,7 +204,39 @@
       <span>© <span id="year"></span> Elegance by Genesis. All rights reserved.</span>
       <span>Shanghai · Keqiao · Serving MENA · SEA · Europe</span>
     </div>
-  </footer>
+    </footer>
+    
+    
+    <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    function closeNav(){
+      document.body.classList.remove('nav-open');
+      navToggle.setAttribute('aria-expanded','false');
+      mobileNav.setAttribute('aria-hidden','true');
+    }
+    navToggle?.addEventListener('click', () => {
+      const open = document.body.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', String(open));
+      mobileNav.setAttribute('aria-hidden', String(!open));
+    });
+    mobileNav?.addEventListener('click', (e) => {
+      if(e.target === mobileNav) closeNav();
+    });
+    document.querySelectorAll('.mobile-sheet a').forEach(a => a.addEventListener('click', closeNav));
+
+    // FAQ toggles
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        item.classList.toggle('open');
+        btn.setAttribute('aria-expanded', item.classList.contains('open'));
+      });
+    });
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
     <script>
     // Desktop/touch dropdown toggle for "Our Customers"
     const dd = document.querySelector('.nav-dropdown');

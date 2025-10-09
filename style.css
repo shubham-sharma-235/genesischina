@@ -51,6 +51,9 @@ nav { display:flex; justify-content:space-between; align-items:center; padding:1
 .mobile-sheet a { display:block; padding:12px 10px; border-radius:10px; color:#2b313b; font-weight:600; }
 .mobile-sheet a:hover { background:#F7F7FA; }
 .mobile-actions { display:flex; gap:10px; padding:8px 10px 4px; }
+.mobile-actions .btn{
+  color: #fff;
+}
 body.nav-open { overflow:hidden; }
 body.nav-open .mobile-panel { display:block; }
 /* Sections */
@@ -237,3 +240,10 @@ footer { background:#FFFFFF; border-top:1px solid var(--border); }
   color: #6b7280;
   margin-left: 10px;
 }
+
+  @media (max-width:900px){
+    .panel .lede{max-width:100%}
+    .wrap {
+      width: 100%;
+    }
+  }
