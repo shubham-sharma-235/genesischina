@@ -197,7 +197,7 @@ footer { background:#FFFFFF; border-top:1px solid var(--border); }
     background-position: 0%;
   }
 }
-@media(max-width:700px){ .media, .media.reverse{grid-template-columns:1fr; direction:ltr;} .media-img{height:300px;} .feature-row{grid-template-columns:1fr;} .collections{grid-template-columns:1fr;} .process{grid-template-columns:1fr 1fr;} .w3f-lede br{display: none;} }
+@media(max-width:700px){ .abaya-section{ display: flex; flex-direction: column-reverse;} .media, .media.reverse{grid-template-columns:1fr; direction:ltr;} .media-img{height:300px;} .feature-row{grid-template-columns:1fr;} .collections{grid-template-columns:1fr;} .process{grid-template-columns:1fr 1fr;} .w3f-lede br{display: none;} }
 /* --- Dropdown base --- */
 .nav-dropdown { position: relative; }
 .nav-dropbtn{
