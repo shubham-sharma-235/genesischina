@@ -11,6 +11,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
+  
+<style>
+  .hero-section {
+    width: 100%;
+    padding: 0;
+  }
+  .hero-section picture,
+  .hero-section img {
+    display: block;   /* removes baseline gap under images */
+    width: 100%;
+    height: auto;     /* keeps section height equal to image height */
+  }
+</style>
 </head>
 <body>
   <!-- Header -->
@@ -77,21 +90,26 @@
   </header>
 
   <!-- Hero -->
-  <section id="hero"><div class="section-inner">
-    <div class="media">
-      <div class="media-text">
-        <h2 style=" font-size:3rem; color:#111;">Where Modesty Meets Elegance</h2>
-        <p style="max-width:540px; margin-top:10px;">Premium fabrics for Abayas, Hijabs, Jilbabs & more — curated for graceful drape, comfort, and timeless appeal.</p>
-        <div class="badges">
-          <span class="badge">Crepe • Chiffon • Nida • Satin</span>
-          <span class="badge">Bulk & MOQ friendly</span>
-          <span class="badge">Global shipping</span>
-        </div>
-        <a href="#collections" class="btn" style="margin-top:18px;">Explore Fabrics</a>
-      </div>
-      <div class="media-img" style=""><img src="./images/about-img-3.png" alt="Elegant woman in abaya"/></div>
-    </div>
-  </div></section>
+  <section class="hero-section" aria-label="Hero image">
+    <a href="#about">
+      <picture>
+      <!-- Desktop / large screens -->
+      <source media="(min-width: 1200px)" srcset="./images/hero-banner-s.jpg" />
+  
+      <!-- Tablet / medium screens (reusing large image for now)
+           If you have a medium asset, swap it here:
+           srcset="./images/hero-banner-m.jpg"
+      -->
+      <source media="(min-width: 768px)" srcset="./images/hero-banner-s.jpg" />
+  
+      <!-- Mobile / small screens -->
+      <source media="(max-width: 767.98px)" srcset="./images/hero-banner-l.jpg" />
+  
+      <!-- Fallback -->
+      <img src="./images/hero-banner-s.jpg" alt="" aria-hidden="true" loading="eager" />
+    </picture>
+    </a>
+  </section>
 
   <!-- About / Company Profile -->
   <section id="about" class="band"><div class="section-inner">
