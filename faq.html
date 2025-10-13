@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elegance by Genesis | Where Modesty Meets Elegance</title>
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <meta name="description" content="Premium fabrics for abayas, hijabs, jilbabs, jackets & trousers. Elegance by Genesis – trusted by global garment manufacturers & fashion houses." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  
+<style>
+  .hero-section {
+    width: 100%;
+    padding: 0;
+  }
+  .hero-section picture,
+  .hero-section img {
+    display: block;   /* removes baseline gap under images */
+    width: 100%;
+    height: auto;     /* keeps section height equal to image height */
+  }
+  .hero{background-image: url('./images/faq-image.jpg');background-position: 30%;background-repeat: no-repeat;background-size: 100%;color: #fff;height: 50vh;}
+  .hero h1{font-size: clamp(30px,2.6vw,58px);text-transform:uppercase;letter-spacing:.02em}
+
+</style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="wrap">
+      <nav aria-label="Primary">
+        <div class="logo">
+          <img style="height: 10vh;" src="./images/logo.png" alt="Elegance by Genesis">
+        </div>
+  
+        <div class="nav-links" role="menubar" aria-label="Main menu">
+          <a href="#hero" role="menuitem">Home</a>
+          <a href="#about" role="menuitem">Our Products</a>
+          <a href="./why-us.html" role="menuitem">Why Us</a>
+          <a href="./faq.html" role="menuitem">Faq's</a>
+  
+          <!-- DROPDOWN: Our Customers -->
+          <div class="nav-dropdown" role="none">
+            <button class="nav-dropbtn"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+              Our Customers
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 20 20" style="margin-left:6px">
+                <path d="M5 7l5 6 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="nav-menu" role="menu" aria-label="Our Customers submenu">
+              <a role="menuitem" href="./our-customers/agents.html">Agents</a>
+              <a role="menuitem" href="./our-customers/brand-owners.html">Brand Owners</a>
+              <a role="menuitem" href="./our-customers/garment-manufacturers.html">Garment Manufacturers</a>
+              <a role="menuitem" href="./our-customers/wholesalers.html">Wholesalers</a>
+            </div>
+          </div>
+          <!-- /DROPDOWN -->
+  
+        </div>
+  
+        <a class="btn" href="#contact">Contact Us</a>
+        <button class="hamburger" id="navToggle" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
+          <img style="height: 3.4vh;" src="./images/menu.png" alt="">
+        </button>
+      </nav>
+    </div>
+  
+    <!-- Mobile sheet -->
+    <div class="mobile-panel" id="mobileNav" aria-hidden="true">
+      <div class="mobile-sheet" role="dialog" aria-modal="true">
+        <div class="mobile-actions">
+          <a class="btn" href="#contact" style="flex:1; text-align:center;">Contact Us</a>
+        </div>
+        <a href="#hero">Home</a>
+        <a href="#about">Our Products</a>
+        <a href="./why-us.html">Why Us</a>
+        <a href="./faq.html">Faq's</a>
+  
+        <!-- Mobile submenu (simple list) -->
+        <div class="mobile-subgroup">
+          <div class="mobile-subhead">Our Customers</div>
+          <a href="./our-customers/agents.html">Agents</a>
+          <a href="./our-customers/brand-owners.html">Brand Owners</a>
+          <a href="./our-customers/garment-manufacturers.html">Garment Manufacturers</a>
+          <a href="./our-customers/wholesalers.html">Wholesalers</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ___________________________________________________________________ -->
+  <!-- HERO -->
+  <section class="hero" aria-label="Agents">
+    <div class="wrap">
+      <h1>Faq's</h1>
+    </div>
+  </section>
+
+    <!-- FAQ (extra content) -->
+    <section class="band" id="faq">
+      <div class="section-inner">
+        <div class="section-head">
+          <div class="kicker">FAQ</div>
+          <h2>Questions, answered</h2>
+          <p class="lede">If you need certifications, shade cards or testing reports, just let us know in your message.</p>
+        </div>
+    
+        <div class="faq">
+    
+          <!-- NEW: Are you a factory? -->
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Are you a factory? <span>+</span></button>
+            <div class="faq-a">
+              <p>No, we are not a factory. Instead, we partner with a network of high-quality, audited factories to bring you the best fabrics. This approach offers several key benefits:</p>
+              <ul>
+                <li><strong>Broader Range</strong>: By working with multiple factories, we can offer a wider variety of textiles to meet your specific needs.</li>
+                <li><strong>Flexibility</strong>: If one factory faces delays or issues, we can quickly shift production to another trusted facility, ensuring your deadlines are met.</li>
+                <li><strong>Specialization</strong>: Each factory we work with specializes in specific types of fabrics, ensuring expertise and quality in every product.</li>
+                <li><strong>Cost Efficiency</strong>: Our partnerships allow us to negotiate better prices and pass the savings on to you.</li>
+                <li><strong>Scalability</strong>: Whether you need a small batch or a large order, we can scale production seamlessly to match your requirements.</li>
+              </ul>
+            </div>
+          </div>
+    
+          <!-- NEW: Compliance & certifications -->
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Can you help with compliance and certifications? <span>+</span></button>
+            <div class="faq-a">
+              <p>Absolutely! We are fully equipped to comply with your market-specific requirements and ensure that all fabrics meet the necessary test criteria for your market or brand. We offer:</p>
+              <ul>
+                <li><strong>GRS</strong> (Global Recycled Standard) for recycled polyester and nylon.</li>
+                <li><strong>BCI</strong> (Better Cotton Initiative), <strong>OCS</strong> (Organic Content Standard), and <strong>GOTS</strong> (Global Organic Textile Standard) for organic cotton.</li>
+                <li><strong>Euroflax</strong> certification for linen.</li>
+                <li><strong>FSC</strong> (Forest Stewardship Council) certified viscose.</li>
+              </ul>
+              <p>Our team will work closely with you to ensure that every fabric not only meets the required certifications but also complies with all test criteria specific to your market or brand. Just communicate your needs, and we’ll provide the necessary documentation and support to ensure full compliance.</p>
+            </div>
+          </div>
+    
+          <!-- NEW: Sustainable fabrics -->
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Do you offer sustainable fabrics? <span>+</span></button>
+            <div class="faq-a">
+              <p>Yes, sustainability is a key focus for us. We offer a wide range of eco-friendly fabrics, including:</p>
+              <ul>
+                <li><strong>Recycled Polyester &amp; Nylon</strong>: Made from post-consumer waste, reducing environmental impact.</li>
+                <li><strong>Organic Cotton</strong>: Grown without harmful pesticides or synthetic fertilizers.</li>
+                <li><strong>BCI Cotton</strong>: Sourced from Better Cotton Initiative (BCI) farms that promote sustainable farming practices.</li>
+                <li><strong>Ecovero Viscose</strong>: A sustainable alternative to traditional viscose, made from renewable wood sources.</li>
+                <li><strong>Recycled Linen</strong>: Environmentally friendly linen made from recycled fibers.</li>
+              </ul>
+              <p>We are committed to helping you create beautiful garments while minimizing your environmental footprint. Let us know your sustainability goals, and we’ll recommend the best fabrics for your needs.</p>
+            </div>
+          </div>
+    
+          <!-- NEW: What makes you different -->
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">What makes Genesis Fabrics different from other suppliers? <span>+</span></button>
+            <div class="faq-a">
+              <p>If you’ve worked with other companies and faced issues like poor quality or unreliable service, it’s time to experience the Genesis difference. With 40+ years of industry expertise, we combine innovation, quality, and customer service to deliver exceptional results. Unlike others, we offer:</p>
+              <ul>
+                <li><strong>Stability in Sourcing</strong>: Partnering with audited, high-quality factories to ensure consistency and reliability.</li>
+                <li><strong>Flawless Execution</strong>: From custom fabric development to rigorous quality control, we ensure every project is executed to perfection.</li>
+                <li><strong>Advanced Systems</strong>: Our homegrown ERP system, GenetPro, streamlines every step, ensuring transparency and efficiency.</li>
+              </ul>
+              <p>We’re not just a supplier – we’re your trusted partner in creativity and success. Let us show you what true reliability looks like.</p>
+            </div>
+          </div>
+    
+          <!-- NEW: Custom fabrics / prints -->
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Can you develop custom fabrics or prints? <span>+</span></button>
+            <div class="faq-a">
+              <p>Yes, we offer custom fabric development services. Whether you need a unique polyester fabric, a custom print, a specific weave, new embroidery or jacquard patterns, or even a fabric tailored to meet a specific function required by the garment (e.g., stretch, moisture-wicking, or thermal properties), our team can bring your vision to life. We work closely with you to ensure the final product meets your exact specifications and performs as needed.</p>
+            </div>
+          </div>
+    
+          <!-- NEW: Handling quality issues -->
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">How do you handle quality issues? <span>+</span></button>
+            <div class="faq-a">
+              <p>Quality is our top priority. If any issues arise, our dedicated quality control team will work with you to resolve them quickly. We conduct internal and third-party lab tests to ensure all fabrics meet your specifications before shipping. If there’s ever a problem, we’ll take full responsibility and find a solution.</p>
+            </div>
+          </div>
+    
+          <!-- EXISTING QUESTIONS (kept) -->
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">What is your typical MOQ? <span>+</span></button>
+            <div class="faq-a">
+              Our standard MOQ varies by quality and shade, but we can accommodate sample meters and small pilot runs for new collections.
+            </div>
+          </div>
+    
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Do you ship internationally? <span>+</span></button>
+            <div class="faq-a">
+              Yes. We ship across MENA, SEA, and Europe with full export documentation and tracking.
+            </div>
+          </div>
+    
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Can I request custom dye-lots? <span>+</span></button>
+            <div class="faq-a">
+              Absolutely. Provide your Pantone or physical swatch and we’ll develop a lab-dip for approval.
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    
+
+  <!-- ___________________________________________________________________ -->
+
+  
+  
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-wrap">
+      <div>
+        <div class="foot-brand">
+          <img style="height: 8vh;" src="./images/favicon.png" alt="">
+        </div>
+        <p class="foot-text">Premium fabrics for abayas, hijabs, jilbabs, jackets & trousers — delivered with consistency, care and global reach.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Collections</h5>
+        <a href="#abaya">Abaya Fabrics</a>
+        <a href="#hijab">Hijab Fabrics</a>
+        <a href="#jilbab">Jilbab Fabrics</a>
+        <a href="#jackets">Jackets & Trousers</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="#about">About Us</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="#collections">Shade Cards</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="mailto:sales@genesischina.com">sales@genesischina.com</a>
+        <a href="tel:+86 18601617588">+86 18601617588</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="year"></span> Elegance by Genesis. All rights reserved.</span>
+      <span>Shanghai · Keqiao · Serving MENA · SEA · Europe</span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    function closeNav(){
+      document.body.classList.remove('nav-open');
+      navToggle.setAttribute('aria-expanded','false');
+      mobileNav.setAttribute('aria-hidden','true');
+    }
+    navToggle?.addEventListener('click', () => {
+      const open = document.body.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', String(open));
+      mobileNav.setAttribute('aria-hidden', String(!open));
+    });
+    mobileNav?.addEventListener('click', (e) => {
+      if(e.target === mobileNav) closeNav();
+    });
+    document.querySelectorAll('.mobile-sheet a').forEach(a => a.addEventListener('click', closeNav));
+
+    // FAQ toggles
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        item.classList.toggle('open');
+        btn.setAttribute('aria-expanded', item.classList.contains('open'));
+      });
+    });
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    // Desktop/touch dropdown toggle for "Our Customers"
+    const dd = document.querySelector('.nav-dropdown');
+    const btn = dd?.querySelector('.nav-dropbtn');
+    const menu = dd?.querySelector('.nav-menu');
+  
+    function closeDropdown(){
+      dd?.classList.remove('open');
+      btn?.setAttribute('aria-expanded', 'false');
+    }
+  
+    btn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isOpen = dd.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    });
+  
+    document.addEventListener('click', (e) => {
+      if (!dd) return;
+      if (!dd.contains(e.target)) closeDropdown();
+    });
+  
+    // close with Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeDropdown();
+    });
+  </script>
+<body>
+</html>
+
+
+
+
+

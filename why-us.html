@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Our Secret — Elegance by Genesis</title>
+<title>Why Us — Elegance by Genesis</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
 <link rel="icon" type="image/png" href="./images/favicon.png"/>
 <link rel="stylesheet" href="./style.css">
@@ -33,14 +33,17 @@
   /* ===== Hero ===== */
   header.hero{
     position:relative; isolation:isolate; overflow:hidden;
-    background: linear-gradient(180deg, #1b2234, #101625);
-    color:#F6EFE9; padding: clamp(72px, 12vw, 120px) 0 clamp(48px, 8vw, 80px);
+    background-image: url('./images/why-us.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 50vh;
     z-index: -1;
   }
   .hero .wrap{position:relative; z-index:2}
   .hero h1{
     font-weight:700; line-height:1.05;
     font-size: clamp(36px, 6vw, 64px);
+    color: #fff;
   }
   .hero p.sub{
     margin-top:10px; max-width:70ch; color:#eee3d7; opacity:.95
@@ -139,21 +142,32 @@
       width: 100%;
     }
   }
+  .team-img{
+    width: 100%;
+    height: clamp(140px, 18vw, 200px); /* responsive height */
+    object-fit: cover;                 /* clean crop */
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 14px rgba(0,0,0,.06);
+  }
+
 </style>
 </head>
 <body>
-  <!-- Header -->
-   <header>
+    <!-- Header -->
+  <header>
     <div class="wrap">
       <nav aria-label="Primary">
         <div class="logo">
-          <img style="height: 8vh;" src="./images/logo.png" alt="Elegance by Genesis">
+          <img style="height: 10vh;" src="./images/logo.png" alt="Elegance by Genesis">
         </div>
   
         <div class="nav-links" role="menubar" aria-label="Main menu">
           <a href="./index.html" role="menuitem">Home</a>
-          <a href="./index.html#about" role="menuitem">About</a>
-          <a href="./our-secret.html" role="menuitem">Our Secret</a>
+          <a href="./index.html#about" role="menuitem">Our Products</a>
+          <a href="./why-us.html" role="menuitem">Why Us</a>
+          <a href="./faq.html" role="menuitem">Faq's</a>
   
           <!-- DROPDOWN: Our Customers -->
           <div class="nav-dropdown" role="none">
@@ -190,8 +204,9 @@
           <a class="btn" href="#contact" style="flex:1; text-align:center;">Contact Us</a>
         </div>
         <a href="./index.html">Home</a>
-        <a href="./index.html#about">About</a>
-        <a href="./our-secret.html">Our Secret</a>
+        <a href="./index.html#about">Our Products</a>
+        <a href="./why-us.html">Why Us</a>
+        <a href="./faq.html">Faq's</a>
   
         <!-- Mobile submenu (simple list) -->
         <div class="mobile-subgroup">
@@ -207,18 +222,9 @@
 
   <!-- HERO -->
   <header class="hero" role="banner" aria-label="Our Secret">
-    <span class="shape tl" aria-hidden="true"></span>
-    <span class="shape tr" aria-hidden="true"></span>
-    <span class="shape br" aria-hidden="true"></span>
 
     <div class="wrap">
-      <span class="kicker">Elegance by Genesis</span>
-      <h1>Our Secret</h1>
 
-      <!-- <div class="cta-row">
-        <a href="#story" class="btn primary">Read the Story</a>
-        <a href="#difference" class="btn ghost">The Genesis Difference</a>
-      </div> -->
     </div>
   </header>
 
@@ -270,19 +276,25 @@
       </div>
 
       <div class="team-grid mt-6">
-        <div class="team-tile reveal">
-          <h4>Sourcing Team</h4>
-          <p>Focused on finding and developing the latest fabrics to meet your needs.</p>
-        </div>
-        <div class="team-tile reveal">
-          <h4>Sales Team</h4>
-          <p>Dedicated to providing exceptional customer service and building lasting relationships.</p>
-        </div>
-        <div class="team-tile reveal">
-          <h4>QC &amp; Compliance Team</h4>
-          <p>Ensuring every fabric meets the highest quality standards and your specific requirements.</p>
-        </div>
+      <div class="team-tile reveal">
+        <img class="team-img" src="./images/t3.jpg" alt="Sourcing Team" loading="lazy">
+        <h4>Sourcing Team</h4>
+        <p>Focused on finding and developing the latest fabrics to meet your needs.</p>
       </div>
+
+      <div class="team-tile reveal">
+        <img class="team-img" src="./images/t2.jpg" alt="Sales Team" loading="lazy">
+        <h4>Sales Team</h4>
+        <p>Dedicated to providing exceptional customer service and building lasting relationships.</p>
+      </div>
+
+      <div class="team-tile reveal">
+        <img class="team-img" src="./images/t1.jpg" alt="QC & Compliance Team" loading="lazy">
+        <h4>QC &amp; Compliance Team</h4>
+        <p>Ensuring every fabric meets the highest quality standards and your specific requirements.</p>
+      </div>
+    </div>
+
     </div>
   </section>
 

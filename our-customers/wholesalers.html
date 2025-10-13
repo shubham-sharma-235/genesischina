@@ -25,14 +25,20 @@
   section{padding: clamp(52px,8vw,90px) 0}
 
   /* HERO (minimal) */
-  .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#1b2234,#121929);color:#F6EFE9}
-  .hero .wrap{position:relative;z-index:2}
+  .hero{background-image: url('../images/wholeseller.jpg');background-position: center;background-repeat: no-repeat;background-size: 100%;color: #fff;height: 50vh;        display: flex;
+        align-items: center;
+        justify-content: center;}
   .hero h1{font-size: clamp(30px,2.6vw,58px);text-transform:uppercase;letter-spacing:.02em}
-  .hero::before{content:"";position:absolute;top:-8%;left:-6%;width:60vw;height:46%;
-    background:linear-gradient(180deg,var(--brand),var(--brand-dark));
-    clip-path:polygon(0 0,100% 0,70% 36%,0 62%);filter:drop-shadow(0 8px 18px rgba(0,0,0,.18))}
-  .hero::after{content:"";position:absolute;right:-12%;bottom:-14%;width:72vw;height:46%;background:#E9DFD1;
-    clip-path:polygon(28% 0,100% 16%,100% 100%,0 100%);opacity:.95}
+  @media(max-width:650px){
+      .hero {
+        background-image: url(../images/wholeseller.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200%;
+        color: #fff;
+        height: 40vh;
+    }
+  }
 
   /* WIDE TEXT PANEL (replaces small card) */
   .panel{
@@ -93,13 +99,14 @@
     <div class="wrap">
       <nav aria-label="Primary">
         <div class="logo">
-          <img style="height: 8vh;" src="../images/logo.png" alt="Elegance by Genesis">
+          <img style="height: 10vh;" src="../images/logo.png" alt="Elegance by Genesis">
         </div>
   
         <div class="nav-links" role="menubar" aria-label="Main menu">
           <a href="../index.html" role="menuitem">Home</a>
-          <a href="../index.html#about" role="menuitem">About</a>
-          <a href="../our-secret.html" role="menuitem">Our Secret</a>
+          <a href="../index.html#about" role="menuitem">Our Products</a>
+          <a href="../why-us.html" role="menuitem">Why Us</a>
+          <a href="../faq.html" role="menuitem">Faq's</a>
   
           <!-- DROPDOWN: Our Customers -->
           <div class="nav-dropdown" role="none">
@@ -136,8 +143,9 @@
           <a class="btn" href="#contact" style="flex:1; text-align:center;">Contact Us</a>
         </div>
         <a href="../index.html">Home</a>
-        <a href="../index.html#about">About</a>
-        <a href="../our-secret.html">Our Secret</a>
+        <a href="../index.html#about">Our Products</a>
+        <a href="../why-us.html">Why Us</a>
+        <a href="../faq.html">Faq's</a>
   
         <!-- Mobile submenu (simple list) -->
         <div class="mobile-subgroup">
