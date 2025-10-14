@@ -233,3 +233,35 @@ footer { background:#FFFFFF; border-top:1px solid var(--border); }
   margin-left: 10px;
 }
 
+.foot-social { margin-top: 10px; }
+.foot-social a{ padding: 6px; }
+
+.ig-link{
+  display: inline-flex !important;       /* force horizontal layout */
+  flex-direction: row !important;        /* icon -> text */
+  align-items: center;
+  gap: 10px;                             /* space between icon & text */
+  text-decoration: none;
+  color: #485060;
+  font-weight: 600;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, transform .1s ease;
+}
+
+.ig-icon{
+  flex: 0 0 20px;                        /* fixed icon width on the LEFT */
+  display: block;
+}
+
+.ig-text{
+  line-height: 1;                        /* clean vertical alignment */
+}
+
+.ig-link:hover{
+  color: #fff;
+  background: var(--brand);
+  border-color: rgba(195,36,39,.4);
+  transform: translateY(-1px);
+}
